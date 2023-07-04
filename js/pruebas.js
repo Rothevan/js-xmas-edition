@@ -13,3 +13,23 @@ function probarValidarNombre() {
 }
 
 probarValidarNombre();
+
+function probarValidarCiudad() {
+    console.assert(
+        validarCiudad('') === 'Debe seleccionar una ciudad', 'Validar ciudad no validó que haya una ciudad seleccionada'
+    );
+}
+
+probarValidarCiudad();
+
+function probarValidarDescripcionRegalo() {
+    console.assert(
+        validarDescripcionRegalo('123123123') === 'Este campo debe tener más de 50 caracteres', 'Validar Descripción regalo no validó que tenga al menos 50 caracteres'
+    );
+
+    console.assert(
+        validarDescripcionRegalo('asdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdasdsdfasdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdfgsdgfsdfgsdfgsdfg') === 'Este campo debe tener menos de 200 caracteres', 'Validar Descripción regalo no validó que el campo tenga menos de 200 caracteres'
+        );
+}
+
+probarValidarDescripcionRegalo();
